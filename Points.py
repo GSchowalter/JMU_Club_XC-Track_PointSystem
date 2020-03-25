@@ -10,14 +10,17 @@ This module holds the class that is the value for the RosterPoints dictionary en
 
 """
 class Points:
-    def __init__(self, cs_points = 0, fr_points = 0):
-        self.cs_points = cs_points
-        self.fr_points = fr_points
+    def __init__(self):
+        self.cs_points = 0
+        self.fr_points = 0
+        self.events = []
 
-    def add_fr(self, points):
+    def add_fr(self, name, points):
         self.fr_points += points
+        self.events += name
 
-    def add_cs(self, points):
+    def add_cs(self, name, points):
         self.cs_points += points
+        self.events += name
 
 
